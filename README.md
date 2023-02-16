@@ -1,5 +1,5 @@
 # Credit Card Validator
-This application exposes REST endpoints to perform Credit Card Validation according to Luhn Algorithm.
+This application exposes REST endpoints to perform Credit Card Number Validation according to Luhn Algorithm.
 
 ## Swagger
 [Credit Card Validation API] http://localhost:8080/swagger-ui/index.html
