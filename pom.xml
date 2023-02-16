@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.0.2</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.ubs.sample</groupId>
+    <artifactId>credit-card-validator-parent</artifactId>
+    <version>${revision}</version>
+    <packaging>pom</packaging>
+    <name>Credit Card Validator - Parent</name>
+
+    <modules>
+        <module>application/card-validator-app</module>
+        <module>application/card-validator-app-integration-test</module>
+        <module>card-domain</module>
+        <module>card-ports</module>
+        <module>card-services</module>
+    </modules>
+
+    <properties>
+        <revision>0.0.1-SNAPSHOT</revision>
+        <java.version>17</java.version>
+        <!-- The main class to start by executing "java -jar" -->
+        <start-class>com.ubs.sample.card.validator.app.CardValidatorApplication</start-class>
+        <springdoc-openapi.version>2.0.2</springdoc-openapi.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+                <version>${springdoc-openapi.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+</project>
